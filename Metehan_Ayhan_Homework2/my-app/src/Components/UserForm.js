@@ -6,7 +6,6 @@ const UserForm = ({ addUser }) => {
   const [username, setUsername] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     if (name && surname && username) {
       addUser({ name, surname, username });
       setName("");
@@ -16,7 +15,6 @@ const UserForm = ({ addUser }) => {
       alert("Lütfen tüm alanları doldurun!");
     }
   };
-
   return (
     <div className="form">
       <form onSubmit={handleSubmit}>
